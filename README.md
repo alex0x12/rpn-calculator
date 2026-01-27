@@ -75,8 +75,8 @@ Run:
 
 ## Output
 By default, the program prints:
-- `RPN:` — the Reverse Polish Notation form
-- `Res:` — the final result
+- `RPN:` - the Reverse Polish Notation form
+- `Res:` - the final result
 
 With `-b`, it prints only the numeric result.
 
