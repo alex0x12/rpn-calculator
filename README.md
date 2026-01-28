@@ -1,21 +1,21 @@
 # RPN Calculator
 
 A command-line calculator that parses infix expressions with the **Shunting Yard** algorithm and evaluates them using **Reverse Polish Notation (RPN)**.
+It's expected to provide grammatically valid expression as there's no preprocessing yet 
 
 ## Features
 - Infix to RPN conversion + evaluation
 - Basic arithmetic: `+`, `-`, `*`, `/`, `^`
 - Unary operators: percent `%`, factorial `!`, unary minus
-- Built-in functions: `sin`, `cos`, `tan`, `cot`, `ln`,
+- Basic functions: `sin`, `cos`, `tan`, `cot`, `ln`,
 - `log`, `exp`, `sqrt`, `min`, `max`
-- Constants: `p` (π), `e`
-- Configurable precision via `-p`
-- Brief output mode via `-b`
+- Constants: `p`(π), `e`
 
 ## Usage
 ```
 ./bin/rpn [options] -- "expr1" "expr2" ...
 ```
+You must provide at least 1 expression string!
 
 ### Options
 - `-p`, `--precision <n>`: number of decimal places (default: 3, max: 30)
@@ -37,7 +37,7 @@ Parentheses `()` override precedence.
 - In expressions of the form `A + B%` and `A - B%`, the percent is treated as a fraction of the left operand:
 - `A + B%` → `A * (1 + B/100)`
 - `A - B%` → `A * (1 - B/100)`
-- Example: `50%` → `0.5`, `200/10%` → `2000`.
+- Example: `50%` → `0.5`, `200+10%` → `220`.
 
 ## Examples
 ```
@@ -49,12 +49,11 @@ Parentheses `()` override precedence.
 
 ## Build
 
-Debug build (default):
+Debug (default):
 ```
 ./build.sh
 ```
-
-Release build:
+Release:
 ```
 ./build.sh -release
 ```
