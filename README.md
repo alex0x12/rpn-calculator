@@ -13,7 +13,7 @@ It's expected to provide grammatically valid expression as there's no preprocess
 
 ## Usage
 ```
-./bin/rpn [options] -- "expr1" "expr2" ...
+./bin/rpn [options] -- 'expr1' 'expr2' ...
 ```
 You must provide at least 1 expression string!
 
