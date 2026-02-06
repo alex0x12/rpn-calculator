@@ -39,14 +39,10 @@ Parentheses `()` override precedence.
 - `A - B%` → `A * (1 - B/100)`
 - Example: `50%` → `0.5`, `200+10%` → `220`.
 
-## Examples
+## Usage example
 ```
-./bin/rpn -- "1+2+3"
-./bin/rpn -p 5 -- "log(2,8)"
-./bin/rpn -b -- "200+10%"
-./bin/rpn -- "sqrt(min(log(8,64),64))"
+rpn -p 5 -b -- '1+2+3' 'log(2,8)' '200+10%' 'sqrt(min(log(8,64),64))'
 ```
-
 ## Build
 
 Debug (default):
